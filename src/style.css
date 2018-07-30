@@ -3,7 +3,7 @@ body {
   color: #f2f2f2;
 }
 
-.outer {
+.main {
   position: relative;
   top: 0;
   left: 0;
@@ -12,7 +12,8 @@ body {
   overflow: hidden;
 }
 
-.main {
+/* Page styling (also used for nav links) */
+.page {
   position: absolute;
   top: 0;
   left: 0;
@@ -20,6 +21,7 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 .landing {
@@ -30,9 +32,20 @@ body {
   background: rgba(0,255,0,0.2);
 }
 
+.portfolio {
+  background: rgba(161, 105, 1, 0.2);
+}
+
+/* Nav styling */
 .navButton {
   position: absolute;
   top: 2rem;
   right: 2rem;
   z-index: 100;
+}
+
+.nav {
+  z-index: 99;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
 }
