@@ -2,6 +2,8 @@ import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { Transition, config } from 'react-spring';
 
+import NavButton from './NavButton';
+
 class Nav extends Component {
   constructor(props) {
     super(props);
@@ -22,9 +24,7 @@ class Nav extends Component {
 
     return (
       <Fragment>
-        <div className="navButton" onClick={this.toggleOpen}>
-          <button>Nav</button>
-        </div>
+        <NavButton toggle={this.toggleOpen} />
         <Transition
           config={config.slow}
           from={{ transform: 'translateY(-100%)' }}
