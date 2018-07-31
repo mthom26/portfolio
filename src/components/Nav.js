@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import { Transition, config } from 'react-spring';
+import { Transition, Spring, config } from 'react-spring';
 
 import NavButton from './NavButton';
 
@@ -24,7 +24,19 @@ class Nav extends Component {
 
     return (
       <Fragment>
-        <NavButton toggle={this.toggleOpen} />
+
+        <Spring
+          to={{
+            transformOne: open ? 'translate(-1px, 13px) rotate(60deg)' : 'translate(0px, 0px) rotate(0deg)',
+            transformTwo: open ? 'translate(1px, -11px) rotate(-60deg)' : 'translate(0px, 0px) rotate(0deg)',
+            transformDiv: open ? 'translate(0px, 17px) rotate(0deg)' : 'translate(0px, 0px) rotate(180deg)'
+          }}
+        >
+          {style => (
+            <NavButton styles={style} toggle={this.toggleOpen} />
+          )}
+        </Spring>
+        
         <Transition
           config={config.slow}
           from={{ transform: 'translateY(-100%)' }}

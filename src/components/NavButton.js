@@ -2,16 +2,21 @@ import React from 'react'
 
 import line from '../images/line.svg';
 
-const NavButton = ({ toggle }) => {
+const NavButton = ({ toggle, styles }) => {
+
   return (
     <div className="navButton" onClick={toggle}>
-      <img
-        src={line} height="12px"
-      />
-      <img src={line} height="12px" />
-      <img
-        src={line} height="12px"
-      />
+      <div className="navButtonDiv" style={{ transform: styles.transformDiv }}>
+        <img
+          style={{ transform: styles.transformOne, transformOrigin: 'right' }}
+          src={line} height="12px"
+        />
+        <img src={line} height="12px" />
+        <img
+        style={{ transform: styles.transformTwo, transformOrigin: 'left' }}
+          src={line} height="12px"
+        />
+      </div>
     </div>
   );
 };
