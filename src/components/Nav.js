@@ -44,7 +44,7 @@ class Nav extends Component {
           leave={{ transform: 'translateY(-100%)' }}
         >
           {open && (style => (
-            <nav style={{ ...style }} className="page nav">
+            <nav style={{ ...style }} className="navPage">
               <Link onClick={this.toggleOpen} to="/">Home</Link> <br />
               <Link onClick={this.toggleOpen} to="/about">About</Link> <br />
               <Link onClick={this.toggleOpen} to="/portfolio">Portfolio</Link>
