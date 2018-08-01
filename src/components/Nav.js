@@ -10,17 +10,24 @@ class Nav extends Component {
 
     this.state = {
       open: false
-    }
+    };
 
     this.toggleOpen = this.toggleOpen.bind(this);
+    this.handlePageChange = this.handlePageChange.bind(this);
   }
 
   toggleOpen() {
     this.setState({ open: !this.state.open });
   }
 
+  handlePageChange(color) {
+    this.toggleOpen();
+    this.props.setColor(color);
+  }
+
   render() {
     const { open } = this.state;
+    const { setColor } = this.props;
 
     return (
       <Fragment>
@@ -45,9 +52,9 @@ class Nav extends Component {
         >
           {open && (style => (
             <nav style={{ ...style }} className="navPage">
-              <Link onClick={this.toggleOpen} to="/">Home</Link> <br />
-              <Link onClick={this.toggleOpen} to="/about">About</Link> <br />
-              <Link onClick={this.toggleOpen} to="/portfolio">Portfolio</Link>
+              <Link onClick={() => this.handlePageChange('#e29865')} to="/">Home</Link> <br />
+              <Link onClick={() => this.handlePageChange('#6598e2')} to="/about">About</Link> <br />
+              <Link onClick={() => this.handlePageChange('#65e298')} to="/portfolio">Portfolio</Link>
             </nav>  
           ))}
         </Transition>

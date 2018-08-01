@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Transition, config } from 'react-spring';
+import { Transition, Spring, config } from 'react-spring';
 
 import Landing from './Landing';
 import Nav from './Nav';
@@ -9,11 +9,27 @@ import Portfolio from './Portfolio';
 import Footer from './Footer';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      color: '#e29865'
+    };
+
+    this.setColor = this.setColor.bind(this);
+  }
+
+  setColor(newColor) {
+    this.setState({ color: newColor });
+  }
+
   render() {
+    const { color } = this.state;
+
     return (
       <Router>
         <div className="main">
-          <Nav />
+          <Nav setColor={this.setColor} />
           <Route render={({ location }) => (
             <Transition
               config={config.slow}
@@ -40,7 +56,13 @@ class App extends Component {
               )}
             </Transition>
           )} />
-          <Footer />
+          <Spring
+            to={{ color: color }}
+          >
+            {style => (
+              <Footer styles={style} />
+            )}
+          </Spring>
         </div>
       </Router>
     );

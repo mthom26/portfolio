@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Footer = () => {
+const Footer = ({ styles }) => {
   return (
-    <div className="footer">
+    <div style={{ borderTop: `2px solid ${styles.color}`}} className="footer">
       <p>footer</p>
     </div>
   );
