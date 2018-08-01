@@ -6,6 +6,7 @@ import Landing from './Landing';
 import Nav from './Nav';
 import About from './About';
 import Portfolio from './Portfolio';
+import Footer from './Footer';
 
 class App extends Component {
   render() {
@@ -39,6 +40,7 @@ class App extends Component {
               )}
             </Transition>
           )} />
+          <Footer />
         </div>
       </Router>
     );

@@ -9,12 +9,12 @@ const NavButton = ({ toggle, styles }) => {
       <div className="navButtonDiv" style={{ transform: styles.transformDiv }}>
         <img
           style={{ transform: styles.transformOne, transformOrigin: 'right' }}
-          src={line} height="12px"
+          src={line} height="12px" alt="Menu Button"
         />
-        <img src={line} height="12px" />
+        <img src={line} height="12px" alt="Menu Button" />
         <img
-        style={{ transform: styles.transformTwo, transformOrigin: 'left' }}
-          src={line} height="12px"
+          style={{ transform: styles.transformTwo, transformOrigin: 'left' }}
+          src={line} height="12px" alt="Menu Button"
         />
       </div>
     </div>

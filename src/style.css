@@ -61,3 +61,13 @@ body {
   align-items: center;
   background: rgba(0, 0, 0, 0.5);
 }
+
+/* Footer Styling */
+.footer {
+  background: gray;
+  padding: 1rem 2rem;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  z-index: 98;
+}
