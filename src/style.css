@@ -12,6 +12,10 @@ body {
   overflow: hidden;
 }
 
+.hrule {
+  margin-bottom: 1rem;
+}
+
 /* Page styling (also used for nav links) */
 .page {
   position: absolute;
@@ -35,19 +39,62 @@ body {
   z-index: -10;
 }
 
+/* Home Page */
 .landing {
   background: url(./images/bg.jpg);
   background-size: cover;
   background-position: center;
 }
 
-/* .about {
-  
+/* About Page */
+.about {
+  align-items: center;
 }
 
+.aboutContents {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1080px;
+  padding: 1rem;
+}
+
+.aboutMe {
+  flex-basis: 48%;
+}
+
+.techsContainer {
+  flex-basis: 48%;
+}
+
+.techs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.techsImage {
+  margin: 0 3rem 3rem 0;
+  height: 48px;
+}
+
+@media only screen and (max-width: 800px) {
+  .aboutContents {
+    flex-direction: column;
+  }
+
+  .aboutMe {
+    flex-basis: 100%;
+  }
+
+  .techsContainer {
+    flex-basis: 50%;
+  }
+}
+
+/* Portfolio Page */
 .portfolio {
   
-} */
+}
 
 /* Nav styling */
 .navButton {
