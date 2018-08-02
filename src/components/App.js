@@ -57,6 +57,7 @@ class App extends Component {
             </Transition>
           )} />
           <Spring
+            config={config.slow}
             to={{ color: color }}
           >
             {style => (
