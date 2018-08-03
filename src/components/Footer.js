@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Footer = ({ styles }) => {
-  console.log(styles.color);
+  //console.log(styles.color);
   return (
     <div
       style={{
