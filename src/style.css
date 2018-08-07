@@ -16,6 +16,17 @@ body {
   margin-bottom: 1rem;
 }
 
+/* Custom scrollbar */
+.main::-webkit-scrollbar {
+  background-color: #3a3a3a;
+  width: 14px;
+}
+
+.main::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.6);
+  border-radius: 14px;
+}
+
 /* Page styling */
 .page {
   position: absolute;
