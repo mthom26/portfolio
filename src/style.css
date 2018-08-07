@@ -9,7 +9,7 @@ body {
   left: 0;
   width: 100%;
   height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .hrule {
@@ -101,6 +101,20 @@ body {
 /* Portfolio Page */
 .portfolio {
   
+}
+
+.projectsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  border: 1px solid red;
+}
+
+/* Project Card */
+.projectCard {
+  background: #3a3a3a;
+  display: flex;
+  width: 30rem;
 }
 
 /* Nav styling */
