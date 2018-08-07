@@ -16,7 +16,7 @@ body {
   margin-bottom: 1rem;
 }
 
-/* Page styling (also used for nav links) */
+/* Page styling */
 .page {
   position: absolute;
   top: 0;
@@ -139,9 +139,17 @@ body {
 
 /* Footer Styling */
 .footer {
-  padding: 1.5rem 2rem;
   position: absolute;
   width: 100%;
   bottom: 0;
   z-index: 90;
+  background: #3a3a3a;
+}
+
+.footerBar {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
 }

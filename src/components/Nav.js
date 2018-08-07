@@ -18,11 +18,13 @@ class Nav extends Component {
 
   toggleOpen() {
     this.setState({ open: !this.state.open });
+    this.props.setPos(this.state.open ? '0%' : '-100%');
   }
 
   handlePageChange(color) {
     this.toggleOpen();
     this.props.setColor(color);
+    this.props.setPos('0%');
   }
 
   render() {

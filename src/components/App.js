@@ -13,23 +13,29 @@ class App extends Component {
     super(props);
 
     this.state = {
-      color: '#e29865'
+      color: '#e29865',
+      footerBarPos: '0%'
     };
 
     this.setColor = this.setColor.bind(this);
+    this.setPos = this.setPos.bind(this);
   }
 
   setColor(newColor) {
     this.setState({ color: newColor });
   }
 
+  setPos(newPos) {
+    this.setState({ footerBarPos: newPos });
+  }
+
   render() {
-    const { color } = this.state;
+    const { color, footerBarPos } = this.state;
 
     return (
       <Router>
         <div className="main">
-          <Nav setColor={this.setColor} />
+          <Nav setColor={this.setColor} setPos={this.setPos} />
           <Route render={({ location }) => (
             <Transition
               config={config.slow}
@@ -58,7 +64,7 @@ class App extends Component {
           )} />
           <Spring
             config={config.slow}
-            to={{ color: color }}
+            to={{ color: color, transform: `translateX(${footerBarPos})` }}
           >
             {style => (
               <Footer styles={style} />
