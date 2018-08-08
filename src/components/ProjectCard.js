@@ -4,10 +4,10 @@ const ProjectCard = () => {
   return (
     <div className="projectCard">
       <div className="projectCardContent">
-        <div>
-          <img src="https://picsum.photos/200/?random" />
+        <div >
+          <img className="projectCardImage" src="https://picsum.photos/200/?random" />
         </div>
-        <div>
+        <div className="projectCardText">
           <h3>Project Name</h3>
           <p>Short project description...</p>
         </div>
