@@ -23,8 +23,7 @@ const About = ({ style}) => {
           enter={{ opacity: 1 }}
         >
           {styles => {
-            console.log(styles);
-            return(
+            return (
             <Fragment>
               <div style={{ ...styles }} className={`aboutMe`}>
                 <h1>About Me</h1>
