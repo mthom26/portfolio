@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { withRouter, Route, Switch } from 'react-router-dom';
 import { Transition, Spring, config } from 'react-spring';
 
 import Landing from './Landing';
@@ -13,12 +13,21 @@ class App extends Component {
     super(props);
 
     this.state = {
-      color: '#e29865',
+      color: this.getColor(),
       footerBarPos: '0%'
     };
 
     this.setColor = this.setColor.bind(this);
     this.setPos = this.setPos.bind(this);
+    this.getColor = this.getColor.bind(this);
+  }
+
+  getColor() {
+    const path = this.props.location.pathname;
+    if(path === '/') return '#e29865';
+    else if (path === '/about') return '#6598e2';
+    else if(path === '/portfolio') return '#65e297';
+    return '#e29865';
   }
 
   setColor(newColor) {
@@ -31,9 +40,8 @@ class App extends Component {
 
   render() {
     const { color, footerBarPos } = this.state;
-
+    
     return (
-      <Router>
         <div className="main">
           <Nav setColor={this.setColor} setPos={this.setPos} />
           <Route render={({ location }) => (
@@ -71,9 +79,8 @@ class App extends Component {
             )}
           </Spring>
         </div>
-      </Router>
     );
   }
 }
 
-export default App;
+export default withRouter(App);
