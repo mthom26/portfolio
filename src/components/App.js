@@ -70,17 +70,21 @@ class App extends Component {
               )}
             </Transition>
           )} />
-          <Spring
-            config={config.slow}
-            to={{ color: color, transform: `translateX(${footerBarPos})` }}
-          >
-            {style => (
-              <Footer styles={style} />
-            )}
-          </Spring>
+          <Footer color={color} footerBarPos={footerBarPos} />
         </div>
     );
   }
 }
 
 export default withRouter(App);
+
+/*
+  <Spring
+    config={config.slow}
+    to={{ color: color, transform: `translateX(${footerBarPos})` }}
+  >
+    {style => (
+      <Footer styles={style} />
+    )}
+  </Spring>
+*/
