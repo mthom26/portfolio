@@ -73,9 +73,10 @@ body {
 /* About Page */
 .about {
   align-items: center;
-  background: url(./images/aboutbg.jpg);
+  background: linear-gradient(-60deg, #0f0f0f, #6598e26e);
+  /* background: url(./images/aboutbg.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: center; */
 }
 
 .aboutContents {

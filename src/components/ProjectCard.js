@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ProjectCard = () => {
+const ProjectCard = ({ title, description}) => {
   return (
     <div className="projectCard">
       <div className="projectCardContent">
@@ -8,8 +8,8 @@ const ProjectCard = () => {
           <img className="projectCardImage" src="https://picsum.photos/200/?random" />
         </div>
         <div className="projectCardText">
-          <h3>Project Name</h3>
-          <p>Short project description...</p>
+          <h3>{title}</h3>
+          <p>{description}</p>
         </div>
       </div>
       <div className="projectCardBar" />

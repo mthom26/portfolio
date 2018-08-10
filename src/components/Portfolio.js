@@ -7,10 +7,18 @@ const Portfolio = ({ style }) => {
     <div style={{ ...style }} className="page portfolio">
       <h1>Portfolio Page</h1>
       <div className="projectsGrid">
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
+        <ProjectCard
+          title="Project 1"
+          description="Short description of project..."
+        />
+        <ProjectCard
+          title="Project 2"
+          description="Short description of project..."
+        />
+        <ProjectCard
+          title="Project 3"
+          description="Short description of project..."
+        />
       </div>
     </div>
   );
