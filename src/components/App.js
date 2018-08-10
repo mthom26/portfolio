@@ -46,6 +46,7 @@ class App extends Component {
           <Nav setColor={this.setColor} setPos={this.setPos} />
           <Route render={({ location }) => (
             <Transition
+              native
               config={config.slow}
               keys={location.pathname}
               from={{ transform: 'translateY(100%)' }}
@@ -79,12 +80,34 @@ class App extends Component {
 export default withRouter(App);
 
 /*
-  <Spring
+<div className="main">
+<Nav setColor={this.setColor} setPos={this.setPos} />
+<Route render={({ location }) => (
+  <Transition
     config={config.slow}
-    to={{ color: color, transform: `translateX(${footerBarPos})` }}
+    keys={location.pathname}
+    from={{ transform: 'translateY(100%)' }}
+    enter={{ transform: 'translateY(0)' }}
+    leave={{ transform: 'translateY(-100%)' }}
   >
-    {style => (
-      <Footer styles={style} />
+    {(style) => (
+      <Switch location={location}>
+        <Route
+          exact path="/"
+          render={props => <Landing style={style} />}
+        />
+        <Route
+          exact path="/about"
+          render={props => <About style={style} />}
+        />
+        <Route
+          exact path="/portfolio"
+          render={props => <Portfolio style={style} />}
+        />
+      </Switch>
     )}
-  </Spring>
+  </Transition>
+)} />
+<Footer color={color} footerBarPos={footerBarPos} />
+</div>
 */

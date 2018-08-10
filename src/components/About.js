@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { Transition } from 'react-spring';
+import { Transition, animated } from 'react-spring';
 import { TimingAnimation, Easing } from 'react-spring/dist/addons';
 
 import bootstrapLogo from '../images/bootstrap-4.svg';
@@ -14,9 +14,10 @@ import sassLogo from '../images/sass-1.svg';
 
 const About = ({ style}) => {
   return (
-    <div style={{ ...style }} className={`page about`}>
+    <animated.div style={{ ...style }} className={`page about`}>
       <div className="aboutContents">
         <Transition 
+          native
           impl={TimingAnimation}
           config={{ duration: 200, easing: Easing.linear }}
           from={{ opacity: 0 }}
@@ -25,14 +26,14 @@ const About = ({ style}) => {
           {styles => {
             return (
             <Fragment>
-              <div style={{ ...styles }} className={`aboutMe`}>
+              <animated.div style={{ ...styles }} className={`aboutMe`}>
                 <h1>About Me</h1>
                 <hr className="hrule"/>
                 <p>Hi there! My name is Michael Thompson and I am an aspiring full stack developer.</p>
                 <p>Most of my work consists of Front End projects built with React however I always enjoy working on Server Side code when the opportunity arises.</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus et hendrerit justo, ullamcorper tincidunt nibh. Aliquam facilisis mi ut aliquam ultrices. Aliquam lacinia hendrerit viverra. Sed convallis et justo.</p>
-              </div>
-              <div style={{ ...styles }} className={`techsContainer`}>
+              </animated.div>
+              <animated.div style={{ ...styles }} className={`techsContainer`}>
                 <h1>Techs I Work With</h1>
                 <hr className="hrule"/>
                 <div className="techs">
@@ -45,15 +46,13 @@ const About = ({ style}) => {
                   <img src={mongodbLogo} className="techsImage" />
                   <img src={sassLogo} className="techsImage" />
                 </div>
-              </div>
+              </animated.div>
             </Fragment>
             );
           }}
         </Transition>
-      
-
       </div>
-    </div>
+    </animated.div>
   );
 };
 

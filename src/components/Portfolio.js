@@ -1,10 +1,11 @@
 import React from 'react';
+import { animated } from 'react-spring';
 
 import ProjectCard from './ProjectCard';
 
 const Portfolio = ({ style }) => {
   return (
-    <div style={{ ...style }} className="page portfolio">
+    <animated.div style={{ ...style }} className="page portfolio">
       <h1>Portfolio Page</h1>
       <div className="projectsGrid">
         <ProjectCard
@@ -20,7 +21,7 @@ const Portfolio = ({ style }) => {
           description="Short description of project..."
         />
       </div>
-    </div>
+    </animated.div>
   );
 };
 
