@@ -2,6 +2,9 @@ import React from 'react';
 
 import Button from './Button';
 
+import githubIcon from '../images/githubWhite.svg';
+import linkIcon from '../images/linkWhite.svg';
+
 const Project = ({ title, description, image}) => {
   return (
     <div className="project">
@@ -13,8 +16,8 @@ const Project = ({ title, description, image}) => {
           <h2>{title}</h2>
           <p>{description}</p>
           <div className="projectButtons">
-            <Button>Github</Button>
-            <Button>Live Demo</Button>
+            <Button text="Github" icon={githubIcon} link="#"/>
+            <Button text="Live Demo" icon={linkIcon} link="#"/>
           </div>
         </div>
       </div>  
