@@ -14,6 +14,8 @@ class Nav extends Component {
 
     this.toggleOpen = this.toggleOpen.bind(this);
     this.handlePageChange = this.handlePageChange.bind(this);
+
+    this.ref1 = React.createRef();
   }
 
   toggleOpen() {
@@ -29,7 +31,8 @@ class Nav extends Component {
 
   render() {
     const { open } = this.state;
-    const { setColor } = this.props;
+    // Using currentColor to add className, works but is messy (see style.css)
+    const { setColor, currentColor } = this.props;
 
     return (
       <Fragment>
@@ -44,10 +47,26 @@ class Nav extends Component {
         >
           {open && (style => (
             <animated.nav style={{ ...style }} className="navPage">
-              <Link onClick={() => this.handlePageChange('#e29865')} to="/">Home</Link> <br />
-              <Link onClick={() => this.handlePageChange('#6598e2')} to="/about">About</Link> <br />
-              <Link onClick={() => this.handlePageChange('#65e298')} to="/portfolio">Portfolio</Link> <br />
-              <Link onClick={() => this.handlePageChange('#e2d565')} to="/contact">Contact</Link>
+              <Link
+                className={`navLink nlHover${currentColor.slice(1)}`}
+                onClick={() => this.handlePageChange('#e29865')}
+                to="/">Home</Link>
+
+              <Link
+                className={`navLink nlHover${currentColor.slice(1)}`}
+                onClick={() => this.handlePageChange('#6598e2')}
+                to="/about">About</Link>
+
+              <Link
+                className={`navLink nlHover${currentColor.slice(1)}`}
+                onClick={() => this.handlePageChange('#65e298')}
+                to="/portfolio">Portfolio</Link>
+
+              <Link
+                className={`navLink nlHover${currentColor.slice(1)}`}
+                onClick={() => this.handlePageChange('#e2d565')} 
+                to="/contact">Contact</Link>
+
             </animated.nav>  
           ))}
         </Transition>

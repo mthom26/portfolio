@@ -27,7 +27,7 @@ class App extends Component {
     const path = this.props.location.pathname;
     if(path === '/') return '#e29865';
     else if (path === '/about') return '#6598e2';
-    else if(path === '/portfolio') return '#65e297';
+    else if(path === '/portfolio') return '#65e298';
     else if(path === '/contact') return '#e2d565';
     return '#e29865';
   }
@@ -45,7 +45,12 @@ class App extends Component {
     
     return (
         <div className="main">
-          <Nav setColor={this.setColor} setPos={this.setPos} />
+          <Nav
+            currentColor={color}
+            setColor={this.setColor}
+            setPos={this.setPos}
+          />
+
           <Route render={({ location }) => (
             <Transition
               native

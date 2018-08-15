@@ -1,7 +1,8 @@
 :root {
-  --green: #65e297;
+  --green: #65e298;
   --orange: #e29865;
   --blue: #6598e2;
+  --yellow: #e2d565;
 }
 
 body {
@@ -312,6 +313,37 @@ body {
   align-items: center;
   background: rgba(0, 0, 0, 0.5);
 }
+
+.navLink {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2rem;
+  color: #f2f2f2;
+  margin: 1rem 0;
+  opacity: 0.9;
+}
+
+/*
+  Setting class using the returned color from App.js 
+  to Nav.js. This is a bit messy, should change it at
+  some point.
+*/
+.nlHovere29865:hover {
+  color: var(--orange);
+}
+
+.nlHover6598e2:hover {
+  color: var(--blue);
+}
+
+.nlHover65e298:hover {
+  color: var(--green);
+}
+
+.nlHovere2d565:hover {
+  color: var(--yellow);
+}
+
 
 /* Footer Styling */
 .footer {
