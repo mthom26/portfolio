@@ -329,3 +329,20 @@ body {
   width: 100%;
   height: 3px;
 }
+
+.footerContent {
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  /* border: 1px solid gold; */
+}
+
+.footerLink {
+  margin: 0 1.5rem;
+  opacity: 0.7;
+  transition: opacity 300ms linear;
+}
+
+.footerLink:hover {
+  opacity: 1;
+}
