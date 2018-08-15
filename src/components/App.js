@@ -6,6 +6,7 @@ import Landing from './Landing';
 import Nav from './Nav';
 import About from './About';
 import Portfolio from './Portfolio';
+import Contact from './Contact';
 import Footer from './Footer';
 
 class App extends Component {
@@ -27,6 +28,7 @@ class App extends Component {
     if(path === '/') return '#e29865';
     else if (path === '/about') return '#6598e2';
     else if(path === '/portfolio') return '#65e297';
+    else if(path === '/contact') return '#e2d565';
     return '#e29865';
   }
 
@@ -66,6 +68,10 @@ class App extends Component {
                   <Route
                     exact path="/portfolio"
                     render={props => <Portfolio style={style} />}
+                  />
+                  <Route
+                    exact path="/contact"
+                    render={props => <Contact style={style} />}
                   />
                 </Switch>
               )}

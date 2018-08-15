@@ -57,7 +57,8 @@ class Nav extends Component {
             <animated.nav style={{ ...style }} className="navPage">
               <Link onClick={() => this.handlePageChange('#e29865')} to="/">Home</Link> <br />
               <Link onClick={() => this.handlePageChange('#6598e2')} to="/about">About</Link> <br />
-              <Link onClick={() => this.handlePageChange('#65e298')} to="/portfolio">Portfolio</Link>
+              <Link onClick={() => this.handlePageChange('#65e298')} to="/portfolio">Portfolio</Link> <br />
+              <Link onClick={() => this.handlePageChange('#e2d565')} to="/contact">Contact</Link>
             </animated.nav>  
           ))}
         </Transition>

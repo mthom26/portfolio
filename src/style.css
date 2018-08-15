@@ -138,7 +138,7 @@ body {
   display: flex;
   margin-left: auto;
   flex-direction: column;
-  border: 1px solid orchid;
+  /* border: 1px solid orchid; */
 }
 
 @media only screen and (min-width: 1200px){
@@ -228,6 +228,10 @@ body {
   }
 }
 
+/* Contact Page */
+.contact {
+  background: linear-gradient(-60deg, #0f0f0f, #e2d5656e);
+}
 /* Button component */
 .button {
   padding: 0.75rem 0;
