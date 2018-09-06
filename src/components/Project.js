@@ -2,8 +2,8 @@ import React from 'react';
 
 import Button from './Button';
 
-import githubIcon from '../images/githubWhite.svg';
-import linkIcon from '../images/linkWhite.svg';
+import githubIcon from '../images/githubGreen.svg';
+import linkIcon from '../images/linkGreen.svg';
 
 const Project = ({ title, description, image}) => {
   return (
