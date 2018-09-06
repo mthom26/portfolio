@@ -11,6 +11,7 @@ const Project = ({ title, description, image}) => {
       <div className="projectImageContainer">
         <img src={image} width="100%"/>  
       </div>   
+      
       <div className="projectContent">
         <div className="projectContentInner">
           <h2>{title}</h2>

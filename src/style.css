@@ -109,12 +109,12 @@ body {
 
 .aboutMe {
   flex-basis: 100%;
-  /* opacity: 0; */
+  margin-bottom: 3rem;
   transition: opacity 500ms ease-in;
 }
 
 .techsContainer {
-  /* opacity: 0; */
+  margin-bottom: 3rem;
   flex-basis: 100%;
   transition: opacity 1000ms ease-in;
 }
@@ -156,9 +156,13 @@ body {
   background: linear-gradient(-60deg, #0f0f0f, #65e2976e);
 }
 
+.portfolio h1 {
+  margin: 0 auto 2rem auto;
+}
+
 .projectsGrid {
   display: flex;
-  margin-left: auto;
+  margin: 0 auto;
   flex-direction: column;
   /* border: 1px solid orchid; */
 }
@@ -169,8 +173,25 @@ body {
   }
 }
 
+@media only screen and (max-width: 1199px) and (min-width: 769px) {
+  .projectsGrid {
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .projectsGrid {
+    width: 100%;
+  }
+
+  .portfolio {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 /* Project Card */
-.projectCard {
+/* .projectCard {
   display: flex;
   flex-direction: column;
   margin: 2rem;
@@ -215,7 +236,7 @@ body {
   .projectCardImage {
     width: 100%;
   }
-}
+} */
 
 /* Project component */
 .project {
@@ -229,6 +250,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  /* border: 1px solid red; */
 }
 
 .projectContent {
@@ -237,11 +259,13 @@ body {
   display: flex;
   align-items: center;
   transform: translateX(-5rem);
+  /* border: 1px solid lawngreen; */
 }
 
 .projectButtons {
  display: flex;
  justify-content: space-evenly;
+ margin-top: 2rem;
 }
 
 @media only screen and (max-width: 1200px){
@@ -250,13 +274,27 @@ body {
   }
 }
 
+@media only screen and (max-width: 1080px){
+  .project {
+    flex-direction: column;
+  }
+
+  .projectContent {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 40rem;
+    transform: translate(0, -5rem);
+  }
+}
+
 /* Contact Page */
 .contact {
   background: linear-gradient(-60deg, #0f0f0f, #e2d5656e);
 }
+
 /* Button component */
 .button {
-  padding: 0.75rem 0;
+  padding: 0.5rem 0;
   position: relative;
   width: 8rem;
   text-decoration: none;
@@ -269,6 +307,7 @@ body {
   align-items: center;
   text-align: center;
   overflow: hidden;
+  transition: opacity 250ms linear;
 }
 
 .buttonText {
@@ -276,7 +315,7 @@ body {
   margin: 0;
   flex-basis: 6rem;
   transform: translateX(1rem);
-  transition: transform 300ms ease-in;
+  transition: transform 250ms ease-in-out;
 }
 
 .buttonIcon {
@@ -284,7 +323,11 @@ body {
   flex-basis: 2rem;
   padding: 0.25rem;
   transform: translateX(2rem);
-  transition: transform 300ms ease-in;
+  transition: transform 200ms ease-in-out;
+}
+
+.button:hover {
+  opacity: 0.85;
 }
 
 .button:hover .buttonText {
