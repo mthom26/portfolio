@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import { Transition, animated } from 'react-spring';
 import { TimingAnimation, Easing } from 'react-spring/dist/addons';
+import { Link } from 'react-router-dom';
 
 import bootstrapLogo from '../images/bootstrap-4.svg';
 import htmlLogo from '../images/HTML5_Logo.svg';
@@ -12,7 +13,7 @@ import postgresLogo from '../images/postgresql.svg';
 import reactLogo from '../images/react.svg';
 import sassLogo from '../images/sass-1.svg';
 
-const About = ({ style}) => {
+const About = ({ style, setColor }) => {
   return (
     <animated.div style={{ ...style }} className={`page about`}>
       <div className="aboutContents">
@@ -52,6 +53,13 @@ const About = ({ style}) => {
           }}
         </Transition>
       </div>
+      <Link
+        to="/portfolio"
+        className="nextPageButton"
+        onClick={() => setColor('#65e298')}
+      >
+        Next
+      </Link>
     </animated.div>
   );
 };

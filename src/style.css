@@ -37,6 +37,15 @@ body {
   border-radius: 14px;
 }
 
+.nextPageButton {
+  border: 1px solid red;
+  position: absolute;
+  margin: 0 auto;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-40%);
+}
+
 /* Page styling */
 .page {
   position: absolute;
@@ -71,6 +80,18 @@ body {
 .landingColor {
   color: var(--orange);
 }
+
+.landingContent {
+  padding-left: 12rem;
+}
+
+@media only screen and (max-width: 800px) {
+  .landingContent {
+    padding-left: 0;
+    text-align: center;
+  }
+}
+
 /* About Page */
 .about {
   align-items: center;

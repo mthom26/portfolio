@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { withRouter, Route, Switch } from 'react-router-dom';
 import { Transition, Spring, config } from 'react-spring';
+import { Helmet } from 'react-helmet';
 
 import Landing from './Landing';
 import Nav from './Nav';
@@ -45,6 +46,11 @@ class App extends Component {
     
     return (
         <div className="main">
+
+          <Helmet>
+            <title>Michael Thompson | Fullstack Web Developer</title>
+          </Helmet>
+
           <Nav
             currentColor={color}
             setColor={this.setColor}
@@ -64,15 +70,21 @@ class App extends Component {
                 <Switch location={location}>
                   <Route
                     exact path="/"
-                    render={props => <Landing style={style} />}
+                    render={props => (
+                      <Landing setColor={this.setColor} style={style} />
+                    )}
                   />
                   <Route
                     exact path="/about"
-                    render={props => <About style={style} />}
+                    render={props => (
+                      <About setColor={this.setColor} style={style} />
+                    )}
                   />
                   <Route
                     exact path="/portfolio"
-                    render={props => <Portfolio style={style} />}
+                    render={props => (
+                      <Portfolio setColor={this.setColor} style={style} />
+                    )}
                   />
                   <Route
                     exact path="/contact"

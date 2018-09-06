@@ -29,6 +29,7 @@ class Nav extends Component {
     this.props.setPos('0%');
   }
 
+  
   render() {
     const { open } = this.state;
     // Using currentColor to add className, works but is messy (see style.css)

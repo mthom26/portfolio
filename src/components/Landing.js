@@ -1,14 +1,21 @@
 import React from 'react';
 import { animated } from 'react-spring';
+import { Link } from 'react-router-dom';
 
-const Landing = ({ style }) => {
+const Landing = ({ style, setColor }) => {
   return (
     <animated.div style={{ ...style }} className="page landing">
-      <h1>Michael <span className="landingColor">Thompson</span></h1>
-      <h2>Web Developer, Programmer and Designer</h2>
-      <div>
-        Links
+      <div className="landingContent">
+        <h1>Michael <span className="landingColor">Thompson</span></h1>
+        <h2>Web Developer, Programmer and Designer</h2>
       </div>
+      <Link
+        to="/about"
+        className="nextPageButton"
+        onClick={() => setColor('#6598e2')}
+      >
+        Next
+      </Link>
     </animated.div>
   );
 };

@@ -8,7 +8,7 @@ const Footer = ({ color, footerBarPos }) => {
   return (
     <Spring
       native
-      config={config.slow}
+      config={{ tension: 140, friction: 90 }}
       to={{ color: color, transform: footerBarPos }}
     >
       {({ color, transform }) => (
