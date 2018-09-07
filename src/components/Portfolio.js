@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 //import ProjectCard from './ProjectCard';
 import Project from './Project';
 
-import blogImage from '../images/projectblog.png';
+import autoRepairImage from '../images/autobodyrepair.jpg';
 import restaurantImage from '../images/projectrestaurant.png';
 
 
@@ -15,8 +15,8 @@ const Portfolio = ({ style, setColor }) => {
       <h1>Portfolio</h1>
       <div className="projectsGrid">
         <Project
-          image={blogImage}
-          title="Gatsby Blog Site"
+          image={autoRepairImage}
+          title="Auto Body Repairs"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ornare iaculis nunc, quis aliquet risus euismod vel. In hac habitasse platea dictumst. Quisque efficitur sed mi et tincidunt. Suspendisse blandit, eros quis consectetur mollis, ligula diam tristique lorem, nec maximus turpis nibh a augue. Aenean at egestas leo."
         />
         <Project
