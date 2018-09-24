@@ -1,6 +1,6 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { withRouter, Route, Switch } from 'react-router-dom';
-import { Transition, Spring, config } from 'react-spring';
+import { Transition, config } from 'react-spring';
 import { Helmet } from 'react-helmet';
 
 import Landing from './Landing';
@@ -101,36 +101,3 @@ class App extends Component {
 }
 
 export default withRouter(App);
-
-/*
-<div className="main">
-<Nav setColor={this.setColor} setPos={this.setPos} />
-<Route render={({ location }) => (
-  <Transition
-    config={config.slow}
-    keys={location.pathname}
-    from={{ transform: 'translateY(100%)' }}
-    enter={{ transform: 'translateY(0)' }}
-    leave={{ transform: 'translateY(-100%)' }}
-  >
-    {(style) => (
-      <Switch location={location}>
-        <Route
-          exact path="/"
-          render={props => <Landing style={style} />}
-        />
-        <Route
-          exact path="/about"
-          render={props => <About style={style} />}
-        />
-        <Route
-          exact path="/portfolio"
-          render={props => <Portfolio style={style} />}
-        />
-      </Switch>
-    )}
-  </Transition>
-)} />
-<Footer color={color} footerBarPos={footerBarPos} />
-</div>
-*/

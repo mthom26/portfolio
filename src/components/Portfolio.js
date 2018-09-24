@@ -18,11 +18,15 @@ const Portfolio = ({ style, setColor }) => {
           image={autoRepairImage}
           title="Auto Body Repairs"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ornare iaculis nunc, quis aliquet risus euismod vel. In hac habitasse platea dictumst. Quisque efficitur sed mi et tincidunt. Suspendisse blandit, eros quis consectetur mollis, ligula diam tristique lorem, nec maximus turpis nibh a augue. Aenean at egestas leo."
+          linkAddress="https://autobodyrepairs.now.sh/"
+          gitHubAddress="https://github.com/mthom26/car-body-repair"
         />
         <Project
           image={restaurantImage}
           title="Gatsby Restaurant Site"
           description="Sed elementum lorem eget diam tincidunt dignissim. Suspendisse eget consectetur libero. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec fringilla congue purus. Nunc sed mi venenatis, hendrerit nunc vel, pharetra eros."
+          altImage="https://gatsbyrestaurant.netlify.com/"
+          gitHubAddress="https://github.com/mthom26/gatsby-restaurant-v2"
         />
       </div>
       <Link
@@ -37,18 +41,3 @@ const Portfolio = ({ style, setColor }) => {
 };
 
 export default Portfolio;
-
-/*
-<ProjectCard
-  title="Project 1"
-  description="Short description of project..."
-/>
-<ProjectCard
-  title="Project 2"
-  description="Short description of project..."
-/>
-<ProjectCard
-  title="Project 3"
-  description="Short description of project..."
-/>
-*/
