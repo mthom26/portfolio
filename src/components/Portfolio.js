@@ -7,7 +7,7 @@ import Project from './Project';
 
 import autoRepairImage from '../images/autobodyrepair.jpg';
 import restaurantImage from '../images/projectrestaurant.png';
-
+import arrowButton from '../images/arrowButton.svg';
 
 const Portfolio = ({ style, setColor }) => {
   return (
@@ -34,7 +34,7 @@ const Portfolio = ({ style, setColor }) => {
         className="nextPageButton"
         onClick={() => setColor('#e2d565')}
       >
-        Next
+        <img src={arrowButton} width="38px" alt="" />
       </Link>
     </animated.div>
   );

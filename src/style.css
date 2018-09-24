@@ -38,12 +38,20 @@ body {
 }
 
 .nextPageButton {
-  border: 1px solid red;
   position: absolute;
+  padding: 0.75rem;
   margin: 0 auto;
   bottom: 100px;
   left: 50%;
+  background: rgba(0,0,0,0.7);
   transform: translateX(-40%);
+  border-radius: 100%;
+  opacity: 0.6;
+  transition: opacity 300ms linear;
+}
+
+.nextPageButton:hover {
+  opacity: 0.9;
 }
 
 /* Page styling */
@@ -164,7 +172,7 @@ body {
   display: flex;
   margin: 0 auto;
   flex-direction: column;
-  /* border: 1px solid orchid; */
+  margin-bottom: 2rem;
 }
 
 @media only screen and (min-width: 1200px){
@@ -342,8 +350,8 @@ body {
 .navButton {
   cursor: pointer;
   position: fixed;
-  width: 40px;
-  height: 40px;
+  width: 70px;
+  height: 70px;
   top: 2rem;
   right: 2rem;
   z-index: 100;
@@ -351,6 +359,10 @@ body {
   flex-direction: column;
   opacity: 0.7;
   transition: opacity 200ms linear;
+
+  padding: 15px;
+  background: rgba(0,0,0,0.7);
+  border-radius: 100%;
 }
 
 .navButton:hover {

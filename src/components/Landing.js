@@ -2,6 +2,8 @@ import React from 'react';
 import { animated } from 'react-spring';
 import { Link } from 'react-router-dom';
 
+import arrowButton from '../images/arrowButton.svg';
+
 const Landing = ({ style, setColor }) => {
   return (
     <animated.div style={{ ...style }} className="page landing">
@@ -14,7 +16,7 @@ const Landing = ({ style, setColor }) => {
         className="nextPageButton"
         onClick={() => setColor('#6598e2')}
       >
-        Next
+        <img src={arrowButton} width="38px" alt="" />
       </Link>
     </animated.div>
   );

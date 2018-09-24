@@ -11,6 +11,7 @@ import nodejsLogo from '../images/nodejs-icon.svg';
 import postgresLogo from '../images/postgresql.svg';
 import reactLogo from '../images/react.svg';
 import sassLogo from '../images/sass-1.svg';
+import arrowButton from '../images/arrowButton.svg';
 
 const About = ({ style, setColor }) => {
   return (
@@ -65,7 +66,7 @@ const About = ({ style, setColor }) => {
         className="nextPageButton"
         onClick={() => setColor('#65e298')}
       >
-        Next
+        <img src={arrowButton} width="38px" alt="" />
       </Link>
     </animated.div>
   );
