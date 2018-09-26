@@ -10,17 +10,18 @@ import restaurantImage from '../images/projectrestaurant.png';
 import arrowButton from '../images/arrowButton.svg';
 
 class Portfolio extends React.Component {
-  
+
   componentDidMount() {
     const scrollableDiv = document.getElementById('main');
-    console.log(scrollableDiv);
+    console.log(this.scrollableDiv);
     scrollableDiv.scrollTop = 0;
   }
 
   render() {
     const { setColor, style } = this.props;
+
     return (
-      <animated.div style={{ ...style }} id="portfolio" className="page portfolio">
+      <animated.div style={{ ...style }} className="page portfolio">
         <h1>Portfolio</h1>
         <div className="projectsGrid">
           <Project
@@ -48,7 +49,6 @@ class Portfolio extends React.Component {
       </animated.div>
     );
   }
-  
 };
 
 export default Portfolio;
