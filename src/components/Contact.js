@@ -4,9 +4,16 @@ import { animated } from 'react-spring';
 const Contact = ({ style }) => {
   return (
     <animated.div style={{ ...style }} className="page contact">
-      <h1>Contact Me</h1>
-      <p>I would love to hear about your project! Send me an email to get in touch!</p>
-      <a href="mailto:michaelthompson.code@gmail.com">michaelthompson.code@gmail.com</a>
+      <div className="contactContent">
+        <h1>Contact Me</h1>
+        <p>If you want to discuss your project just send me an email!</p>
+        <a
+          className="contactEmail"
+          href="mailto:michaelthompson.code@gmail.com"
+        >
+          michaelthompson.code@gmail.com
+        </a>
+      </div>
     </animated.div>
   );
 };

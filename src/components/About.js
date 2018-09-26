@@ -30,9 +30,9 @@ const About = ({ style, setColor }) => {
               <animated.div style={{ ...styles }} className={`aboutMe`}>
                 <h1>About Me</h1>
                 <hr className="hrule"/>
-                <p>Hi there! My name is Michael Thompson and I am an aspiring full stack developer.</p>
-                <p>Most of my work consists of Front End projects built with React however I always enjoy working on Server Side code when the opportunity arises.</p>
-                <p>I am currently taking on freelance projects from simple one page websites to full stack web applications. If you think I can help be sure to get in touch!</p>
+                <p>Hi there. My name is Michael Thompson and I am an aspiring full stack web developer.</p>
+                <p>I enjoy solving problems and implementing features on both the front and back end of the stack. Specifically I am confident in React and NodeJS.</p>
+                <p>I am currently taking on freelance projects from simple one page websites to full stack web applications. If you think I can help be sure to <Link to="/contact" onClick={() => setColor('#e2d565')}><span className="aboutLink">get in touch!</span></Link></p>
               </animated.div>
               <animated.div style={{ ...styles }} className={`techsContainer`}>
                 <h1>Skills</h1>

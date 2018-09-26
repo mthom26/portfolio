@@ -8,7 +8,7 @@
 body {
   background: #3a3a3a;
   color: #f2f2f2;
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   font-family: 'Lato', sans-serif;
 }
 
@@ -112,6 +112,15 @@ body {
   background-position: center; */
 }
 
+.aboutLink {
+  color: var(--blue);
+  opacity: 0.8;
+}
+
+.aboutLink:hover {
+  opacity: 1;
+}
+
 .aboutContents {
   display: flex;
   flex-direction: column;
@@ -201,54 +210,6 @@ body {
   }
 }
 
-/* Project Card */
-/* .projectCard {
-  display: flex;
-  flex-direction: column;
-  margin: 2rem;
-  background: #3a3a3a;
-  width: 30rem;
-  border-radius: 5px;
-}
-
-.projectCardContent {
-  display: flex;
-}
-
-.projectCardText {
-  padding: 1rem;
-}
-
-.projectCardBar {
-  height: 3px;
-  width: 0%;
-  background: var(--green);
-  transition: width 300ms linear;
-}
-
-.projectCard:hover {
-  cursor: pointer;
-}
-
-.projectCard:hover .projectCardBar {
-  width: 100%;
-}
-
-@media only screen and (max-width: 550px) {
-  .projectCardContent {
-    flex-direction: column;
-  }
-
-  .projectCard {
-    width: 90%;
-    margin: 0 0 2rem 0;
-  }
-
-  .projectCardImage {
-    width: 100%;
-  }
-} */
-
 /* Project component */
 .project {
   display: flex;
@@ -301,6 +262,20 @@ body {
 /* Contact Page */
 .contact {
   background: linear-gradient(-60deg, #0f0f0f, #e2d5656e);
+}
+
+.contactContent {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contactEmail {
+  color: var(--yellow);
+  opacity: 0.8;
+}
+
+.contactEmail:hover {
+  opacity: 1;
 }
 
 /* Button component */
