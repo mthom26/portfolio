@@ -25,7 +25,7 @@ const Portfolio = ({ style, setColor }) => {
           image={restaurantImage}
           title="Gatsby Restaurant Site"
           description="Sed elementum lorem eget diam tincidunt dignissim. Suspendisse eget consectetur libero. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec fringilla congue purus. Nunc sed mi venenatis, hendrerit nunc vel, pharetra eros."
-          altImage="https://gatsbyrestaurant.netlify.com/"
+          linkAddress="https://gatsbyrestaurant.netlify.com/"
           gitHubAddress="https://github.com/mthom26/gatsby-restaurant-v2"
         />
       </div>
