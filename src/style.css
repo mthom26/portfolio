@@ -8,6 +8,8 @@
 body {
   background: #3a3a3a;
   color: #f2f2f2;
+  font-size: 1.05rem;
+  font-family: 'Lato', sans-serif;
 }
 
 .main {
@@ -91,6 +93,7 @@ body {
 
 .landingContent {
   padding-left: 12rem;
+  
 }
 
 @media only screen and (max-width: 800px) {

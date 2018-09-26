@@ -9,7 +9,7 @@ const Landing = ({ style, setColor }) => {
     <animated.div style={{ ...style }} className="page landing">
       <div className="landingContent">
         <h1>Michael <span className="landingColor">Thompson</span></h1>
-        <h2>Web Developer, Programmer and Designer</h2>
+        <h2 style={{ fontWeight: 400 }}>Web Developer, Programmer and Designer</h2>
       </div>
       <Link
         to="/about"
