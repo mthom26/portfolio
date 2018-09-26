@@ -365,7 +365,7 @@ body {
   justify-content: center;
   z-index: 99;
   align-items: center;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7);
 }
 
 .navLink {

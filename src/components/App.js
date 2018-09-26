@@ -45,7 +45,7 @@ class App extends Component {
     const { color, footerBarPos } = this.state;
     
     return (
-        <div className="main">
+        <div id="main" className="main">
 
           <Helmet>
             <title>Michael Thompson | Fullstack Web Developer</title>
