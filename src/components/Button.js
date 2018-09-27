@@ -7,7 +7,7 @@ const Button = ({ text, icon, link }) => {
         {text}
       </span>
       <div className="buttonIcon">
-        <img src={icon} />
+        <img src={icon} alt="" />
       </div>
     </a>
   );

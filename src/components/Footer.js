@@ -1,5 +1,5 @@
 import React from 'react';
-import { Spring, config, animated, interpolate } from 'react-spring';
+import { Spring, animated } from 'react-spring';
 
 import emailIcon from '../images/envelopeWhite.svg';
 import githubIcon from '../images/githubWhite.svg';
@@ -23,10 +23,10 @@ const Footer = ({ color, footerBarPos }) => {
           />
           <div className="footerContent">
             <a className="footerLink" href="mailto:michaelthompson.code@gmail.com">
-              <img src={emailIcon} width="32px"/>
+              <img src={emailIcon} width="32px" alt="" />
             </a>
             <a className="footerLink" href="https://github.com/mthom26">
-              <img src={githubIcon} width="32px" />
+              <img src={githubIcon} width="32px" alt="" />
             </a>
           </div>
         </div>

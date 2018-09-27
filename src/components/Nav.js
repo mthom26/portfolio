@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import { Transition, Spring, config, animated } from 'react-spring';
+import { Transition, config, animated } from 'react-spring';
 
 import NavButton from './NavButton';
 
@@ -33,7 +33,7 @@ class Nav extends Component {
   render() {
     const { open } = this.state;
     // Using currentColor to add className, works but is messy (see style.css)
-    const { setColor, currentColor } = this.props;
+    const { currentColor } = this.props;
 
     return (
       <Fragment>

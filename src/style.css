@@ -171,6 +171,12 @@ body {
   }
 }
 
+@media only screen and (max-width: 800px) {
+  .aboutContents {
+    margin-bottom: 3rem;
+  }
+}
+
 /* Portfolio Page */
 .portfolio {
   background: linear-gradient(-60deg, #0f0f0f, #65e2976e);

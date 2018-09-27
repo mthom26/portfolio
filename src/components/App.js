@@ -49,6 +49,7 @@ class App extends Component {
 
           <Helmet>
             <title>Michael Thompson | Fullstack Web Developer</title>
+            <meta name="description" content="Michael Thompson is a freelance fullstack web developer based in the United Kingdom." />
           </Helmet>
 
           <Nav
