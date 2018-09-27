@@ -1,14 +1,17 @@
 import React from 'react';
 import { animated } from 'react-spring';
 import { Link } from 'react-router-dom';
+import ReactGA from 'react-ga';
 
 import arrowButton from '../images/arrowButton.svg';
 
 class Landing extends React.Component {
   componentDidMount() {
     const scrollableDiv = document.getElementById('main');
-    console.log(this.scrollableDiv);
+    //console.log(this.scrollableDiv);
     scrollableDiv.scrollTop = 0;
+    ReactGA.initialize('UA-107308251-4');
+    ReactGA.pageview('/');
   }
 
   render() {

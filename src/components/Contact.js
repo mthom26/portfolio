@@ -1,11 +1,14 @@
 import React from 'react';
 import { animated } from 'react-spring';
+import ReactGA from 'react-ga';
 
 class Contact extends React.Component {
   componentDidMount() {
     const scrollableDiv = document.getElementById('main');
-    console.log(this.scrollableDiv);
+    //console.log(this.scrollableDiv);
     scrollableDiv.scrollTop = 0;
+    ReactGA.initialize('UA-107308251-4');
+    ReactGA.pageview('/contact');
   }
 
   render() {

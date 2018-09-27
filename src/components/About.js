@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import { Transition, animated } from 'react-spring';
 import { TimingAnimation, Easing } from 'react-spring/dist/addons';
 import { Link } from 'react-router-dom';
+import ReactGA from 'react-ga';
 
 import htmlLogo from '../images/HTML5_Logo.svg';
 import cssLogo from '../images/css3.svg';
@@ -16,8 +17,10 @@ import arrowButton from '../images/arrowButton.svg';
 class About extends React.Component {
   componentDidMount() {
     const scrollableDiv = document.getElementById('main');
-    console.log(this.scrollableDiv);
+    //console.log(this.scrollableDiv);
     scrollableDiv.scrollTop = 0;
+    ReactGA.initialize('UA-107308251-4');
+    ReactGA.pageview('/about');
   }
   
   render() {

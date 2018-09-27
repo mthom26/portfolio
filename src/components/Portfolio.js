@@ -1,6 +1,7 @@
 import React from 'react';
 import { animated } from 'react-spring';
 import { Link } from 'react-router-dom';
+import ReactGA from 'react-ga';
 
 //import ProjectCard from './ProjectCard';
 import Project from './Project';
@@ -13,8 +14,10 @@ class Portfolio extends React.Component {
 
   componentDidMount() {
     const scrollableDiv = document.getElementById('main');
-    console.log(this.scrollableDiv);
+    //console.log(this.scrollableDiv);
     scrollableDiv.scrollTop = 0;
+    ReactGA.initialize('UA-107308251-4');
+    ReactGA.pageview('/portfolio');
   }
 
   render() {
